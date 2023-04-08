@@ -93,4 +93,55 @@ public class LinkedList {
                 System.out.println(searchData+"is not found in LinkedList");
         }
     }
+    public int size() {
+        int count = 0; // No data 1 element
+
+        Node temp = head;
+
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+
+        return count;
+    }
+
+    public void insertAtSpecificIndex(int userIndex, int data) {
+
+        // User trying to insert @ first position
+        if (userIndex == 0)
+            push(data);
+
+            // // User trying to insert @ last position
+        else if (userIndex == size())
+            append(data);
+
+            // User trying to insert @ invalid position
+        else if (userIndex < 0 || userIndex >= size())
+            System.out.println("Invalid index");
+            // User trying to insert @ specific index
+        else {
+            // Creating New Node
+            Node newNode = new Node(data);
+
+            // To track traversing
+            int index = 0;
+
+            // Pointers to track left & right side elements
+            Node left = head;
+            Node right = left.next;
+
+            // Traverse or Move till last element before user entered index
+            while (index < userIndex - 1) {
+                left = left.next;
+                right = right.next;
+                index++;
+            }
+
+            // Connecting new Node with right side elements
+            newNode.next = right;
+            // Connecting left side elements with new Node
+            left.next = newNode;
+        }
+    }
 }
