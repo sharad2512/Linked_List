@@ -1,6 +1,6 @@
 package com.linked_List;
 
-public class SortedLinkesList<T extends Comparable <T>> {
+public class SortedLinkedList<T extends Comparable <T>> {
         MyNode<T>head;
         MyNode<T>current;
         int position;

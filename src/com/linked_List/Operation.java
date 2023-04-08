@@ -65,6 +65,7 @@ public class Operation {
         linkedList.print();
         linkedList.search(30);
     }
+
     public static void insertAtSpecificIndex() {
         LinkedList linkedList = new LinkedList();
         Node firstNode = linkedList.push(70);
@@ -77,6 +78,7 @@ public class Operation {
         System.out.println("After adding element at position");
         linkedList.print();
     }
+
     public static void deleteAtIndexPosition(){
         LinkedList linkedList = new LinkedList();
         Node firstNode = linkedList.push(70);
