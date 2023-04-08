@@ -42,4 +42,12 @@ public class LinkedList {
             }
         }
     }
+    public void pop(){
+        if(this.head==null){
+
+        }
+        Node temp =head;
+        head = temp.next;
+        temp =null;
+    }
 }
