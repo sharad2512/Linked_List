@@ -66,4 +66,31 @@ public class LinkedList {
             temp.next = null;
         }
     }
+    public void search(int searchData)
+    {
+        if(head.key == searchData)
+            System.out.println(searchData + " is found in LinkedList");
+        else
+        {
+            Node temp=head;
+
+            boolean isFound=false;
+
+            while(temp!=null)
+            {
+                if(temp.key == searchData)
+                {
+                    isFound = true;
+                    break;
+                }
+
+                temp=temp.next;
+            }
+            System.out.println("                      ");
+            if(isFound == true)
+                System.out.println(searchData+ "is found in LinkedList");
+            else
+                System.out.println(searchData+"is not found in LinkedList");
+        }
+    }
 }
