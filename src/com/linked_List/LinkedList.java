@@ -7,13 +7,23 @@ public class LinkedList {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
-            tail = newNode;
-        } else {
+            tail= newNode;
+        }else {
             Node temp = head;
             this.head = newNode;
             newNode.next = temp;
         }
         return newNode;
+    }
+    public void append(int data) { // 56=> 30=> 70
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            this.tail.next = newNode;
+            tail = newNode;
+        }
     }
 
     public void print() {
